@@ -1,8 +1,7 @@
 .fortnite {
-  width: 1900px;
-  height: 900px;
+  scale: 11;
   margin: 0px;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 body {
   margin: 0px;
