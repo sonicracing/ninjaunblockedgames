@@ -1,7 +1,8 @@
-.fortnite {
+.game {
   width: 100%;
   height: 800px;
   border: 1px solid black;
+  display: none;
 }
 body {
   margin: 0px;
