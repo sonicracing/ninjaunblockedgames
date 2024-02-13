@@ -12,15 +12,25 @@
     }
   </style>
   <script>
-    function gameChange(element, source) { element.style.display = "block"; element.src = source; }
+    function gameChange(name, source) {
+      document.getElementById("game").style.display = "block";
+      document.getElementById("game").src = source;
+      document.getElementById("fullscreen").style.display = "inline";
+      document.getElementById("title").style.display = "inline";
+      document.getElementById("title").innerHTML = name;
+    }
   </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <iframe id="game" src="https://webglmath.github.io/moto-x3m/"></iframe>
+  <div>
+    <iframe id="game" src="https://webglmath.github.io/moto-x3m/"></iframe>
+    <h1 id="title">moto X3M</h1>
+    <img id="fullscreen" src="images/fullscreen.png">
+  </div>
   <div class="parent">
-    <a onclick="gameChange(game, 'https://1v1.school')">
+    <a onclick="gameChange('1v1.lol', 'https://1v1.school')">
       <img src="images/fortnite.jpeg">
     </a>
   </div>
