@@ -13,11 +13,23 @@
   </style>
   <script>
     function gameChange(name, source) {
-      document.getElementById("game").style.display = "block";
-      document.getElementById("game").src = source;
+      var frame = document.getElementById("game");
+      var title = document.getElementById("title");
+      frame.style.display = "block";
+      frame.src = source;
       document.getElementById("fullscreen").style.display = "inline";
-      document.getElementById("title").style.display = "inline";
-      document.getElementById("title").innerHTML = name;
+      title.style.display = "inline";
+      title.innerHTML = name;
+    }
+    function gameFullscreen() {
+      var elem = document.getElementById("game");
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+      }
     }
   </script>
   <link rel="stylesheet" href="styles.css">
@@ -25,9 +37,9 @@
 
 <body>
   <div>
-    <iframe id="game" src="https://webglmath.github.io/moto-x3m/"></iframe>
+    <iframe id="game" allowfullscreen="" src="https://webglmath.github.io/moto-x3m/"></iframe>
     <h1 id="title">moto X3M</h1>
-    <img id="fullscreen" src="images/fullscreen.png">
+    <img onclick="gameFullscreen()" id="fullscreen" src="images/fullscreen.png">
   </div>
   <div class="parent">
     <a onclick="gameChange('1v1.lol', 'https://1v1.school')">
