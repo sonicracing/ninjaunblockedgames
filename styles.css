@@ -1,21 +1,36 @@
 #game {
-  width: 100%;
+  width: 80%;
   height: 800px;
   border: 1px solid black;
   display: none;
+  margin: auto;
 }
 #fullscreen {
   display: none;
   float: right;
-  width: 5%;
-  height: 5%;
+  width: 5vh;
+  height: 5vh;
   padding: 2%;
 }
 #title {
   display: none;
   font-size: 50px;
-  padding: 5%;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.game-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.game-bottom {
+  background-color: #202029;
+  width: 80%;
+  margin: auto;
 }
 body {
   margin: 0px;
+  background-color: #16181e;
 }
