@@ -9,6 +9,9 @@
     .parent {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: 5%;
     }
   </style>
   <script>
@@ -38,19 +41,20 @@
 </head>
 
 <body>
-  <div class="game-section">
-    <iframe id="game" allowfullscreen="" src="https://webglmath.github.io/moto-x3m/"></iframe>
-    <div class="game-bottom">
-      <h1 id="title">moto X3M</h1>
-      <img onclick="gameFullscreen()" id="fullscreen" src="images/fullscreen.png">
+  <main>
+    <div class="game-section">
+      <iframe id="game" allowfullscreen="" src="https://webglmath.github.io/moto-x3m/"></iframe>
+      <div class="game-bottom">
+        <h1 id="title">moto X3M</h1>
+        <img onclick="gameFullscreen()" id="fullscreen" src="images/fullscreen.png">
+      </div>
     </div>
-  </div>
-  <div class="parent">
-    <a onclick="gameChange('1v1.lol', 'https://1v1.school')">
-      <img src="images/fortnite.jpeg">
-    </a>
-  </div>
-
+    <div class="parent">
+      <a onclick="gameChange('1v1.lol', 'https://1v1.school')">
+        <img src="images/fortnite.jpeg">
+      </a>
+    </div>
+  </main>
 </body>
 
 </html>
