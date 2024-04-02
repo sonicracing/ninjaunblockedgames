@@ -1,5 +1,5 @@
 :root {
-  --frame-width: 100vw;
+  --frame-width: 98vw;
 }
 #game {
   width: var(--frame-width);
