@@ -1,9 +1,9 @@
 :root {
-  --frame-width: 100%;
+  --frame-width: 100vw;
 }
 #game {
   width: var(--frame-width);
-  height: 800px;
+  height: 100vh;
   border: 1px solid black;
   display: none;
   margin: auto;
